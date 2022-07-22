@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import styled from "styled-components";
+import { SERVER } from "../../../../config";
 import { PostType } from "../../../../interfaces/PostType";
 import ImageViewer from "./ImageViewer";
 
@@ -40,8 +41,10 @@ const LookForOthersImages = styled.div`
 `;
 
 export default function PostContent({ postData }: { postData: PostType }) {
-  const isHaveImage = postData.Images.length;
+  const isHaveImage = postData.Images[0] != "";
   const [isImageViewerOpen, SetImageViewerState] = useState<boolean>(false);
+
+  console.log(postData.Images);
 
   return (
     <Container>
@@ -49,7 +52,9 @@ export default function PostContent({ postData }: { postData: PostType }) {
       {isHaveImage ? (
         <ImagesContainer>
           <img
-            src={postData.Images[0]}
+            src={
+              SERVER + "post_image/" + postData.id + "/" + postData.Images[0]
+            }
             alt={postData.Creator.Firstname + " " + postData.Creator.Surname}
           />
           {postData.Images.length > 1 ? (
@@ -61,7 +66,9 @@ export default function PostContent({ postData }: { postData: PostType }) {
       ) : null}
       <ImageViewer
         closeViewerFunction={() => SetImageViewerState(false)}
-        Images={postData.Images}
+        Images={postData.Images.map(
+          (image) => SERVER + "post_image/" + postData.id + "/" + image
+        )}
         isImageViewerOpen={isImageViewerOpen}
       />
     </Container>

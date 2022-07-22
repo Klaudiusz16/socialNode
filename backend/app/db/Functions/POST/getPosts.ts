@@ -15,12 +15,8 @@ export const GET_POSTS = async () => {
         id: id,
         Avatar: Avatar,
       };
-      (post.Images = post.Images.length
-        ? post.Images.split(",").map(
-            (image) => process.env.SERVER + `/post_image/${post.id}/${image}`
-          )
-        : []),
-        delete post.CreatorID;
+      post.Images = post.Images.split(",");
+      delete post.CreatorID;
       post.LikedBy = post.LikedBy.map((like) => like.LikerID);
       post.Comments.map((comment) => {
         const { Firstname, Surname, Avatar, id } = comment.Creator;

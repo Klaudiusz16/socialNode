@@ -9,11 +9,6 @@ import {
 import { createUploadLink } from "apollo-upload-client";
 import { SERVER } from "../../config";
 
-// const httpLink = createHttpLink({
-//   credentials: "include",
-//   uri: SERVER + "graphql",
-// });
-
 import React from "react";
 
 export default function Apollo({ children }) {

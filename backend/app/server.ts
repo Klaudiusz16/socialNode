@@ -15,7 +15,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["*", "http://192.168.12.85:8000"],
+    origin: ["*", "http://localhost:8000"],
     credentials: true,
   })
 );
@@ -35,7 +35,7 @@ app.use("/logout", (req, res) => {
     // secure: true,
     // domain: ClientServer,
   });
-  res.redirect("http://192.168.12.85:8000/");
+  res.redirect("http://localhost:8000/");
 });
 
 app.use(Middleware);
