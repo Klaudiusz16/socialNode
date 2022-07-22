@@ -2,9 +2,43 @@
 A social app that allows you to communicate with other app users by writing posts or by chatting.
 </br>
 
-<span style="color: #824341">
+<span style="color:red">
+The website was created for the purpose of learning programming. It may contain bugs.
+This is beta version. The app will keep getting better in the near future.
+</span>
+
+</br>
+
+</br>
+
+## Implementations 
+<ul>
+  <li>Creating and removing posts</li>
+  <li>attaching images to posts</li>
+  <li>Reporting posts</li>
+  <li>Chating with app users</li>
+  <li>Notifications</li>
+  <li>Friend List</li>
+  <li>Own profile avatar</li>
+  <li>Searching from user list</li>
+</ul>
+
+<span style="color:red">
 The website was created for the purpose of learning programming. It may contain bugs.
 </span>
+
+</br>
+
+## The app is created using:
+<ul>
+  <li>React.js, Gatsby</li>
+  <li>Typescript</li>
+  <li>GraphQL</li>
+  <li>Material UI</li>
+  <li>React Redux</li>
+  <li>Express.js</li>
+  <li>MySQL (knex, objection) </li>
+</ul>
 
 </br>
 
