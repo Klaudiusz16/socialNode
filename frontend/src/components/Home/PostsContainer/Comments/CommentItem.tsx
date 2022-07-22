@@ -6,6 +6,7 @@ import { CalcTime } from "../../../calctime/calcTime";
 import RemoveCircleOutline from "@mui/icons-material/RemoveCircleOutline";
 import { useAppSelector } from "../../../../redux/hooks";
 import { gql, useMutation } from "@apollo/client";
+import { SERVER } from "../../../../config";
 
 const Container = styled.div`
   display: flex;
@@ -89,7 +90,7 @@ export default function CommentItem({
             gap: "9px",
           }}
         >
-          <Avatar src={commentData.Creator.Avatar} />
+          <Avatar src={SERVER + "avatar/" + commentData.Creator.Avatar} />
           <Column>
             <Typography fontSize="16px" fontWeight={"400"}>
               {commentData.Creator.Firstname +

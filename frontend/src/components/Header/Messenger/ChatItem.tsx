@@ -6,6 +6,7 @@ import { CalcTime } from "../../calctime/calcTime";
 import { useAppSelector } from "../../../redux/hooks";
 import { gql, useMutation } from "@apollo/client";
 import { MessageType } from "./../../../interfaces/ChatType";
+import { SERVER } from "../../../config";
 
 const Container = styled.div<{ isNewMessage: boolean }>`
   width: 310px;
@@ -94,7 +95,7 @@ export default function ChatItem({ chatData }: { chatData: ChatType }) {
         onClick={() => makeMessageRead()}
       >
         <Avatar
-          src={user.Avatar}
+          src={SERVER + "avatar/" + friend.Avatar}
           sx={{
             width: "50px",
             height: "50px",

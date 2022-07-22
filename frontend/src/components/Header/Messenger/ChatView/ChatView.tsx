@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { messengerChatTest } from "../../../../data/testMessengerView";
 import {
   Autocomplete,
   Avatar,
@@ -15,6 +14,8 @@ import { useAppDispatch, useAppSelector } from "../../../../redux/hooks";
 import SendIcon from "@mui/icons-material/Send";
 import { updateAlertState } from "../../../../redux/AlertSlice";
 import { ChatType } from "../../../../interfaces/ChatType";
+import { SERVER } from "../../../../config";
+import { navigate } from "gatsby";
 
 const Container = styled.div`
   display: flex;
@@ -210,13 +211,20 @@ export default function ChatView({
         ) : (
           <>
             <Avatar
-              src={friend?.Avatar}
+              src={SERVER + "avatar/" + friend?.Avatar}
               sx={{
                 width: "35px",
                 height: "35px",
+                cursor: "pointer",
               }}
+              onClick={() => navigate("/profile/" + friend.id)}
             />
-            <Typography color="black" fontWeight="400">
+            <Typography
+              color="black"
+              fontWeight="400"
+              sx={{ cursor: "pointer" }}
+              onClick={() => navigate("/profile/" + friend.id)}
+            >
               {friend.Firstname + " " + friend.Surname}
             </Typography>
           </>

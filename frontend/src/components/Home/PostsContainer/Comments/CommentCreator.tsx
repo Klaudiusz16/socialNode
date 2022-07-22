@@ -5,6 +5,7 @@ import { useAppSelector } from "../../../../redux/hooks";
 import { gql, useMutation } from "@apollo/client";
 import { updateAlertState } from "../../../../redux/AlertSlice";
 import { useAppDispatch } from "./../../../../redux/hooks";
+import { SERVER } from "../../../../config";
 
 const Container = styled.div`
   display: flex;
@@ -71,7 +72,7 @@ export default function CommentCreator({ postID }: { postID: string }) {
     <Container>
       <Column>
         <Row>
-          <Avatar src={avatarSrc} />
+          <Avatar src={SERVER + "avatar/" + avatarSrc} />
           <Typography>{Firstname + " " + Surname}</Typography>
         </Row>
         <Row>

@@ -2,6 +2,7 @@ import { Avatar, Button, Typography } from "@mui/material";
 import { navigate } from "gatsby";
 import React from "react";
 import styled, { css } from "styled-components";
+import { SERVER } from "../../../config";
 import { NotificationType } from "../../../interfaces/Notification";
 import { CalcTime } from "../../calctime/calcTime";
 
@@ -62,7 +63,7 @@ export default function NotificationItem(notification: NotificationType) {
           height: "50px",
         }}
         alt="Notification image"
-        src={notification.From.Avatar}
+        src={SERVER + "avatar/" + notification.From.Avatar}
       />
       <HelpedContainer>
         <Typography fontSize={"14px"} sx={{ width: "200px" }}>

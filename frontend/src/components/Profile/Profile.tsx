@@ -89,6 +89,7 @@ export default function Profile({ location }) {
             }}
             onClick={() => {
               isFriend ? null : inviteFriend();
+              isFriend = true;
             }}
           >
             {isFriend ? "- Remove Friend" : "+ Add Friend"}

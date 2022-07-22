@@ -32,6 +32,7 @@ const Container = styled.div`
   justify-content: space-around;
   padding: 40px 60px;
   gap: 20px;
+  position: relative;
 `;
 
 const Exit = styled.div`

@@ -38,6 +38,8 @@ export default function MenuItem({
       onClick={() => {
         if (name == "Logout") {
           document.cookie = "signedin=false";
+          document.cookie = "userID=false";
+          document.cookie = "jwt=false";
         }
         dispatch(switchUserMenuModal("off"));
         navigate(href);

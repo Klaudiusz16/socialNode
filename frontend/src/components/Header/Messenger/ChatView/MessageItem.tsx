@@ -2,6 +2,7 @@ import { Avatar, Grow, Typography } from "@mui/material";
 
 import React, { useState } from "react";
 import styled from "styled-components";
+import { SERVER } from "../../../../config";
 import { MessageType } from "../../../../interfaces/ChatType";
 import { useAppSelector } from "../../../../redux/hooks";
 import { CalcTime } from "../../../calctime/calcTime";
@@ -61,7 +62,7 @@ export default function MessageItem({
             height: "30px",
             width: "30px",
           }}
-          src={friendAvatar}
+          src={SERVER + "avatar/" + friendAvatar}
         />
       ) : null}
       <Column from={messageType}>

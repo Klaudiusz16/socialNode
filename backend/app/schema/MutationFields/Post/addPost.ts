@@ -30,7 +30,7 @@ export const addpost = {
 
         const dir = path.join(
           __dirname,
-          `../../images/posts/post_${postID.id}/`
+          `../../../images/posts/post_${postID.id}/`
         );
 
         if (!fs.existsSync(dir)) {
