@@ -29,7 +29,7 @@ The website was created for the purpose of learning programming. It may contain 
 
 </br>
 
-## The app is creating using:
+## Frameworks and Libraries 
 <ul>
   <li>React.js, Gatsby</li>
   <li>Typescript</li>
