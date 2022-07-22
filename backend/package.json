@@ -5,7 +5,7 @@
   "author": "Klaudiusz Kurbiel",
   "license": "MIT",
   "scripts": {
-    "start": "set NODE_ENV=dev && yarn nodemon ./app/server.ts",
+    "start": "npx knex migrate:latest --knexfile ./app/db/knexfile.js && yarn nodemon ./app/server.ts",
     "migrate": "npx knex migrate:latest --knexfile ./app/db/knexfile.js"
   },
   "devDependencies": {
