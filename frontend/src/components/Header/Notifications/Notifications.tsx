@@ -108,7 +108,7 @@ export default function Notifications({ playAudio }) {
   });
 
   useEffect(() => {
-    if (NotificationsData?.getNotifications) {
+    if (NotificationsData?.getNotifications?.notifications) {
       updateNotifications(NotificationsData?.getNotifications.notifications);
     }
     if (newNotificationsCounter) playAudio();
