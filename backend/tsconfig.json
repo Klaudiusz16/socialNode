@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "lib": ["es2021", "dom"],
+    "target": "es6",
+    "outDir": "ts-built",
+    "rootDir": "./app",
+    "skipLibCheck": true
+  }
+}

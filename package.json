@@ -1,0 +1,9 @@
+{
+  "name": "socialNode",
+  "version": "1.0.0",
+  "description": "A social app that allows you to communicate with other app users by writing posts or by chatting.",
+  "main": "index.js",
+  "repository": "https://github.com/Klaudiusz16/SocialNode.git",
+  "author": "Klaudiusz Kurbiel",
+  "license": "MIT"
+}
