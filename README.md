@@ -23,9 +23,6 @@ This is beta version. The app will keep getting better in the near future.
   <li>Searching from user list</li>
 </ul>
 
-<span style="color:red">
-The website was created for the purpose of learning programming. It may contain bugs.
-</span>
 
 </br>
 
